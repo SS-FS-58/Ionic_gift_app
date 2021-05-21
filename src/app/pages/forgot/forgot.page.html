@@ -1,0 +1,39 @@
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row style="margin-top: 13px;">
+      <ion-col><ion-icon (click)="goto('home')" name="arrow-back" style="font-weight: bold"></ion-icon><span (click)="goto('home')" style="font-weight: bold;margin-left: 3px">Back</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="center">
+        <div class="lbl">Forget Password</div> 
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: 52%;" >
+      <ion-col size="12" >
+        <div class="card">
+          <form [formGroup]="forgotform">
+              <ion-row style="margin-top:10%">
+                  <ion-col size="12">
+                    <div class="unmae">Email</div>
+                    <ion-input formControlName="email"  class="inp"></ion-input>
+                    <div *ngIf="forgotform.controls.email.hasError('pattern') && forgotform.controls.email.touched">
+                        <p class="com">Invalid</p>
+                      </div>
+                  </ion-col>
+                </ion-row> 
+                <ion-row>
+                  <ion-col size="12">
+                      <ion-button [disabled]="forgotform.invalid" (click)="change(forgotform.value)" class="btn" size="small" color="dark">Send Link</ion-button>
+                  </ion-col>
+                </ion-row>
+          </form>
+         
+         
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+ 

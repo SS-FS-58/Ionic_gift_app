@@ -1,0 +1,102 @@
+
+    <ion-header >
+        <ion-toolbar style="text-align: center">
+          <ion-row>
+          
+              <ion-col size="4"><ion-icon (click)="goto('main')" name="arrow-back" style="font-weight: bold;font-size: 19px;"></ion-icon><span (click)="goto('main')" style="font-weight: bold;margin-left: 3px;font-size: 20px;">Back</span></ion-col>
+         
+            <ion-col size="6"><ion-title style="font-family: Tahoma, Geneva, sans-serif;font-weight:bold;">My Cards</ion-title></ion-col>
+          </ion-row>
+          
+        </ion-toolbar>
+      </ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row>
+<ion-col size="12">
+    <div class="card" style="margin-top:5%">
+        <ion-row>
+          <img style="height:255px;width:100%" src="assets/img/Group 104@2x.png">
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="center">
+            <div class="namediv">
+                <img  src="assets/img/Profile.png"><span>Samantha Jophsan</span>
+            </div>
+            <ion-label class="lbl">Happy 25th Birthday :)</ion-label>
+            <div class="lbl2">on 16th Sep, 2019</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <button class="phot">Photos/Videos</button>
+          </ion-col>
+          <ion-col size="6">
+              <button class="phot2">$500 AUD</button>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="card" style="margin-top:5%">
+          <ion-row>
+            <img style="height:255px;width:100%" src="assets/img/Group 107.png">
+          </ion-row>
+          <ion-row>
+              <ion-col size="12" class="center">
+                <div class="namediv">
+                    <img  src="assets/img/Profile.png"><span>Samantha Jophsan</span>
+                </div>
+                <ion-label class="lbl">Happy 25th Birthday :)</ion-label>
+                <div class="lbl2">on 16th Sep, 2019</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <button class="phot">Photos/Videos</button>
+              </ion-col>
+              <ion-col size="6">
+                  <button class="phot2">$500 AUD</button>
+              </ion-col>
+            </ion-row>
+        </div>
+        <div class="card" style="margin-top:5%">
+            <ion-row>
+              <img style="height:255px;width:100%" src="assets/img/Group 106.png">
+            </ion-row>
+            <ion-row>
+                <ion-col size="12" class="center">
+                  <div class="namediv">
+                      <img  src="assets/img/Profile.png"><span>Samantha Jophsan</span>
+                  </div>
+                  <ion-label class="lbl">Happy 25th Birthday :)</ion-label>
+                  <div class="lbl2">on 16th Sep, 2019</div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="6">
+                  <button class="phot">Photos/Videos</button>
+                </ion-col>
+                <ion-col size="6">
+                    <button class="phot2">$500 AUD</button>
+                </ion-col>
+              </ion-row>
+          </div>
+</ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+<ion-footer>
+    <ion-row>
+      <ion-col size="4">
+        <img class="k l" (click)="goto('main')" src="assets/img/Home.png">
+        
+      </ion-col>
+      <ion-col size="4">
+          <img class="k " (click)="goto('mycard')" src="assets/img/g1.png">
+          <div class="cap">cards</div>
+      </ion-col>
+      <ion-col size="4">
+          <img class="k l" (click)="goto('profile')" src="assets/img/Profile.png">
+          
+      </ion-col>
+    </ion-row>
+  </ion-footer>

@@ -1,0 +1,128 @@
+<ion-content>
+  <img src="assets/img/bglogin.png" [class]="isZoomed?'backImg scale-up-tl':'backImg scale-down-tl'" />
+
+  <ion-grid [class]="isZoomed
+    ?
+    'fade-out md hydrated loginComp'
+    :
+    'fade-in md hydrated loginComp'">
+    <ion-row style="margin-top: 13px;">
+      <ion-col (click)="isZoomed=true">
+        <ion-icon (click)="goto('home')" name="arrow-back" class="backIcon">
+        </ion-icon>
+        <span (click)=" goto('home')" class="backText">
+          Back
+        </span>
+      </ion-col>
+    </ion-row>
+
+
+
+
+    <ion-row>
+      <ion-col size="12" class="center">
+        <div class="lbl">Welcome back</div>
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-row style="margin-top: 52%;">
+      <ion-col size="12">
+        <div class="card">
+          <ion-row>
+            <ion-col size="12">
+              <div class="unmae">Username or Email</div>
+              <ion-input [(ngModel)]="email" class="inp"></ion-input>
+              <div class="unmae">Password</div>
+              <ion-input type="password" [(ngModel)]="password" class="inp"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <span class="for" (click)="goto('forgot')">Forgot password?</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <ion-button (click)="login('login')" class="btn" size="small" color="dark">Login</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="center">
+              <span style="font-size: 13px;">Don't have an account?</span><span
+                style="font-weight: bold;text-decoration: underline;font-size: 14px;">Signup</span>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+
+
+
+
+  </ion-grid>
+
+
+  <div style="position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 49px;
+">
+
+    <ion-row>
+      <ion-col size="6" class="right">
+        <ion-button (click)="isZoomed=false"
+          [class]="isZoomed
+          ?
+          'fade-in btn ion-color ion-color-dark md button button-small button-solid ion-activatable ion-focusable hydrated'
+          :
+          'fade-out btn ion-color ion-color-dark md button button-small button-solid ion-activatable ion-focusable hydrated'" color="dark">
+          Login</ion-button>
+
+      </ion-col>
+      <ion-col size="6">
+        <ion-button
+          [class]="isZoomed
+        ?
+        'fade-in btn ion-color ion-color-tertiary md button button-small button-solid ion-activatable ion-focusable hydrated'
+        :
+        'fade-out btn ion-color ion-color-tertiary md button button-small button-solid ion-activatable ion-focusable hydrated'"
+          (click)="goto('login')">Signup</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="center">
+        <ion-label [class]="isZoomed
+        ?
+        'fade-in white sc-ion-label-md-h sc-ion-label-md-s md hydrated'
+        :
+        'fade-out white sc-ion-label-md-h sc-ion-label-md-s md hydrated'">
+          or login with
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="12">
+        <div class="google" [class]="isZoomed
+        ?
+        'fade-in google'
+        :
+        'fade-out google'">
+
+          <img class="stick" src="assets/img/google.png">
+          <span class="gimg">Google</span>
+        </div>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+  </div>
+  <!-- <app-login style="position: absolute;bottom: '20%';"></app-login> -->
+
+</ion-content>

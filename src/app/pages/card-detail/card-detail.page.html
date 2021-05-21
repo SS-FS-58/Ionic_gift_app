@@ -1,0 +1,63 @@
+
+
+<ion-content>
+    <ion-icon (click)="goback()" class="back" name="arrow-back"></ion-icon><span (click)="goback()" class="back text-b">Back</span>
+    <img src="{{cardObj.card_img}}" style="width:100%;height:38%">
+    
+    <ion-row>
+      <ion-col size="12" class="center">
+       <div class="trends"><img src="assets/img/f2.png"><span>Trending</span></div>
+       <ion-label class="lbl">{{cardObj.card_name}}</ion-label>
+       <div class="lbl2">Customize your card</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <button  class="add"><ion-icon name="add-circle" style="font-size:17px"></ion-icon> Add photos and videos</button>
+      </ion-col>
+    </ion-row> 
+  
+    <ion-row style="margin-top:15%">
+      <ion-col class="center">
+
+        <img (click)="imageFromWhre()" style="width:60px" src="{{image1}}">
+      </ion-col>
+      <ion-col class="center">
+        <img (click)="selectImage2()" style="width:60px" src="{{image2}}">
+      </ion-col>
+      <ion-col class="center">
+        <img (click)="selectVideo()" style="width:60px;height:70px" src="assets/img/youtube.png">
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top:5%;">
+      <ion-col size="4">
+        <div (click)="decrese()" class="right">-</div>
+      </ion-col>
+      <ion-col size="4" class="center">
+          <div syle="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif	
+          ">Gift Money</div>
+          <div  class="ruppe">$<input id="amt" type="number" class="amnt" value="00">AUD</div>
+        </ion-col>
+      <ion-col size="4">
+          <div (click)="increase()" class="left">+</div> 
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+      <ion-label style="margin-left: 24px;margin-top: 13px;">Add Text</ion-label>
+      <ion-input [(ngModel)]="msg" style="border-bottom:1px solid gray;width:95%"></ion-input>
+      </ion-col>
+    </ion-row>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col size="5" style="text-align:right">
+        <div class="ruppe tt">$<input style="background:none" disabled id="totalamt" type="number" class="amnt" value="{{price}}"> AUD</div>
+        <div class="lbl3" syle="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Including all taxes</div>
+    </ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col size="5" style="text-align:right">
+      <button (click)="buyNow()" class="bttn"><ion-icon name="cart"></ion-icon>Buy card</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

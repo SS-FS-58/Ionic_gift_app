@@ -1,0 +1,155 @@
+ion-content {
+  // --background: #fff url('src/assets/img/bg.png') no-repeat center center / cover;
+}
+.backImg {
+  position: absolute;
+  width: "100%";
+}
+
+.scale-up-tl {
+  animation: scale-up-tl 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.scale-down-tl {
+  animation: scale-down-tl 0.8s cubic-bezier(0.25, 0.86, 0.85, 0.94) both;
+}
+.fade-out {
+  -webkit-animation: fade-out 0.6s ease-out both;
+  animation: fade-out 0.6s ease-out both;
+}
+.fade-in {
+  -webkit-animation: fade-in 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.backIcon {
+  font-weight: bold;
+  font-size: 25px;
+}
+.backText {
+  font-weight: bold;
+  margin-left: 34px;
+  margin-top: -25px;
+  display: block;
+}
+@keyframes scale-down-tl {
+  0% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+@keyframes scale-up-tl {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.head {
+  color: grey;
+  margin-top: 26%;
+  font-size: 26px;
+}
+.subhead {
+  font-size: 41px;
+  font-weight: bold;
+  position: relative;
+  left: 19%;
+}
+.btn {
+  width: 122px;
+  height: 34px;
+}
+.google {
+  width: 90%;
+  height: 35px;
+  border-radius: 10px;
+  margin-left: 5%;
+  background: #fff;
+  position: absolute;
+}
+.gimg {
+  position: relative;
+  left: 31%;
+  top: -5px;
+}
+.stick {
+  max-width: 100%;
+  position: relative;
+  border: 0;
+  left: 10px;
+  top: 5px;
+}
+ion-button {
+  text-transform: capitalize;
+}
+
+.loginComp {
+  .card {
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 11px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 8px;
+  }
+  .lbl {
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 30px;
+  }
+  .btn {
+    width: 92%;
+    height: 34px;
+    text-transform: capitalize;
+    margin: 0 auto;
+    display: block;
+  }
+  .inp {
+    border-bottom: 2px solid #ededed;
+    margin-top: 5px;
+    width: 85%;
+    margin-left: 8%;
+    --padding-bottom: 2px !important;
+  }
+  .unmae {
+    font-size: 14px;
+    margin-top: 10%;
+    margin-left: 8%;
+  }
+  .for {
+    text-decoration: underline;
+    color: #fcba7d;
+    font-size: 13px;
+    margin-left: 7%;
+  }
+}

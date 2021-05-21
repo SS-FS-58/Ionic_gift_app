@@ -1,0 +1,79 @@
+.innerdiv{
+    width: 100%;
+    height: 175px;
+    background: #fff;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.graytxt{
+    color: gray;
+    font-size: 15px;
+}
+.ruppe{
+    font-weight:bold;
+    font-size:23px;
+    color:#fff;
+    margin-top:3%;
+}
+.ruppe2{
+    font-weight:bold;
+    font-size:20px;
+    color:#000;
+}
+.outer{
+    width: 100%;
+    height: 246px;
+    background: #5162f5;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: absolute;
+    text-align: center;
+}
+.k{
+    margin-left: 39px;
+}
+.cap{
+    font-size: 11px;
+    margin-left: 37%;
+    color:#fcba7d;
+}
+.l{
+    margin-top:8px;
+}
+.editbtn{
+    width: 155px;
+    background: none;
+    border: 2px solid #e8e8e8;
+    height: 30px;
+    position: relative;
+    top: 6px;
+    border-radius: 8%;
+}
+.sublbl{
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:20px;
+    margin-left: 24px;
+}
+.sub_head{
+    margin-left: 24px;
+    font-size: 14px;
+}
+.myicon{
+    position: relative;
+        top: -34px;
+        float: right;
+        font-size: 30px;
+        color: #000;
+}
+.topimg{
+    margin-top: 16px;width:70px;
+    height:70px;
+    border-radius:70px;
+}
+.logout_bbtn{
+    border: 1px solid #feebeb;
+    background: none;
+    color: #f84545;
+    width: 135px;
+    height: 40px;
+}

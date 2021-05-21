@@ -1,0 +1,110 @@
+.edit{
+    font-size:24px;
+    font-weight:bold;
+    font-family:Tahoma, Geneva, sans-serif;
+    margin-top: -5px;
+}
+.whitebox{
+    width: 100%;
+    height: 66%;
+    border-radius: 40px;
+    box-shadow: 0 8px 19px -6px #00000073;
+}
+.imh{
+    width: 100%;
+    height: 71%;
+}
+.lbl{
+    position: relative;
+    top: 7px;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.lbl2{
+    position: relative;
+    top: 4px;
+    font-size: 13px;
+    color: gray;
+}
+.namediv{
+    position:absolute;
+ }
+
+ .namediv span{
+    position: relative;
+    font-size: 13px;
+    left: 73%;
+    top: 0px;
+ }
+ .proinm{
+    position: relative;
+    left: 67%;
+    top: 13px;
+ }
+ .switch input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /**
+   * 1. Adjust this to size
+   */
+  
+  .switch {
+    display: inline-block;
+    font-size: 20px;
+    height: 2.5em;
+    width: 16em;
+    position: absolute;
+    border-radius: 6em;
+    margin-left: 9px;
+    background: #fcba7d;
+
+  }
+  
+  .switch div {
+    height: 50px;
+    width: 8em;
+    border-radius: 3em;
+    background: #fcc695;
+    transition: all 300ms;
+    margin-top: -1px;
+    position: relative;
+    top: -24px;
+    color: #ffff;
+    line-height: 47px;
+    padding-left: 5%;
+    font-weight: normal;
+    font-size: 19px;
+  }
+  .male{
+    position: relative;
+    top: 11px;
+    left: 14%;
+    font-size: 16px;
+  }
+  .female{
+    position: relative;
+    top: 11px;
+    right: -25%;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+  }
+//   .switch input:checked + div {
+//     transform: translate3d(100%, 0, 0);
+//   }
+.vvv{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: -19px;
+}
+.msgbox{
+    width: 100%;
+    height: 77px;
+    background: #f1f1f1;
+    border-radius: 27px;
+    border-top-left-radius: 0px;
+}

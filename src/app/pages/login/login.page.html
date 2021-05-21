@@ -1,0 +1,47 @@
+
+
+<ion-content>
+  <ion-grid>
+    
+      <ion-row style="margin-top: 13px;">
+          <ion-col><ion-icon (click)="goto('home')" name="arrow-back" style="font-weight: bold;font-size: 25px;
+          "></ion-icon><span (click)="goto('home')" style="    font-weight: bold;
+        margin-left: 34px;
+        margin-top: -25px;
+        display: block;">Back</span></ion-col>
+        </ion-row>
+
+
+    <ion-row>
+      <ion-col size="12" class="center">
+        <div class="lbl">Register Now</div> 
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: 52%;" >
+      <ion-col size="12" >
+        <div class="card">
+          <ion-row>
+            <ion-col size="12">
+              <div class="unmae">Username or Email</div>
+              <ion-input [(ngModel)]="email" class="inp"></ion-input>
+              <div class="unmae">Password</div>
+              <ion-input type="password" [(ngModel)]="password" class="inp"></ion-input>
+            </ion-col>
+          </ion-row> 
+         
+          <ion-row>
+            <ion-col size="12">
+                <ion-button (click)="goto('add-profile')" class="btn" size="small" color="dark">Sign Up</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="center">
+              <span style="font-size: 13px;">Already have an account?</span><span (click)="goto('signup')" style="font-weight: bold;text-decoration: underline;font-size: 14px;">Login</span>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+ 

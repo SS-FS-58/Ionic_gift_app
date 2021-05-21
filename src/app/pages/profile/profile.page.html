@@ -1,0 +1,78 @@
+
+<ion-content>
+  <div class="outer">
+    <div class="innerdiv">
+      <img  class="topimg" src="{{userData.image}}" onError="this.src='assets/img/default.png'">
+      <div class="ruppe2">{{userData.first_name}} {{userData.last_name}}</div>
+      <ion-label class="graytxt">{{userData.email}}</ion-label><br>
+      <button class="editbtn" (click)="goto('edit-profile')">Edit Profile</button>
+    </div>
+    <ion-label style="color:#fff;font-size: 13px">Received gift amount</ion-label>
+      <div class="ruppe">$0.00 AUD</div>
+      <ion-icon name="arrow-forward" style="color: #fff;
+      position: relative;
+      top: -34px;
+      left: 115px;
+      font-size: 35px;"></ion-icon>
+  </div>
+  <ion-row style="margin-top:60%">
+    <ion-col style="padding-right: 28px;" no-padding size="12" *ngFor="let opt of option">
+      <div>
+        <ion-label class="sublbl">{{opt.head}}</ion-label>
+        <div class="sub_head">{{opt.sub_head}}</div>
+        <ion-icon class="myicon" name="arrow-forward"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col size="12" class="center">
+      <button (click)="logout()" class="logout_bbtn">Logout</button>
+    </ion-col>
+    <!-- <ion-col size="12">
+        <div>
+          <ion-label style="font-family:Verdana, Geneva, sans-serif;font-size:20px;margin-left: 24px;">Terms and conditions</ion-label>
+          <div style="margin-left: 24px;font-size: 14px;">Read our terms and conditions</div>
+          <ion-icon name="arrow-forward" style="color: #000;
+          position: relative;
+          top: -34px;
+          float: right;
+          font-size: 30px;"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col size="12">
+          <div>
+            <ion-label style="font-family:Verdana, Geneva, sans-serif;font-size:20px;margin-left: 24px;">Contact support</ion-label>
+            <div style="margin-left: 24px;font-size: 14px;">We are ready to assist you</div>
+            <ion-icon name="arrow-forward" style="color: #000;
+            position: relative;
+            top: -34px;
+            float: right;
+            font-size: 30px;"></ion-icon>
+          </div>
+        </ion-col>
+        <ion-col size="12">
+            <div>
+              <ion-label style="font-family:Verdana, Geneva, sans-serif;font-size:20px;margin-left: 24px;">FAQ's </ion-label>
+              <div style="margin-left: 24px;font-size: 14px;">frequently asked questions</div>
+              <ion-icon name="arrow-forward" style="color: #000;
+              position: relative;
+              top: -34px;
+              float: right;
+              font-size: 30px;"></ion-icon>
+            </div>
+          </ion-col> -->
+  </ion-row>
+</ion-content>
+<ion-footer>
+    <ion-row>
+      <ion-col size="4">
+        <img class="k l" (click)="goto('main')" src="assets/img/Home.png">
+        
+      </ion-col>
+      <ion-col size="4">
+          <img class="k l" (click)="goto('mycard')" src="assets/img/Group.png">
+      </ion-col>
+      <ion-col size="4">
+          <img class="k " (click)="goto('profile')" src="assets/img/p2.png">
+          <div class="cap">Profile</div>
+      </ion-col>
+    </ion-row>
+  </ion-footer>

@@ -1,0 +1,38 @@
+ion-content{
+    --background: #fff url('../../../assets/img/signupback.png') no-repeat center center / cover;
+}
+.card{
+    width: 80%;
+    height: 288px;
+    background: #fff;
+    border-radius: 34px;
+    margin-left: 10%;
+    box-shadow: 0 11px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.lbl{
+    font-weight:bold;font-size: 27px;margin-top: 30px;
+}
+.btn{
+    width: 90%;
+    height: 34px;
+    margin-left:5%;
+}
+.inp{
+    border-bottom:2px solid #ededed;
+    margin-top: 10px;
+    width:85%;
+    margin-left: 8%;
+    --padding-bottom:2px !important;
+}
+.unmae{
+    font-size: 14px;
+    /* margin: 10px 19px; */
+    margin-top: 32%;
+    margin-left: 8%;
+}
+.for{
+    text-decoration: underline;
+    color: #fcba7d;
+    font-size: 13px;
+    margin-left: 7%;
+}

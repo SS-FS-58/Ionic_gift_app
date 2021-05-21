@@ -1,0 +1,70 @@
+
+ 
+
+
+<ion-content>
+<ion-grid>
+
+    <ion-row style="margin-top: 13px;">
+      
+      </ion-row>
+
+  <ion-row style="margin-top: 13px;"> 
+      <!-- <ion-col size="4"><ion-icon (click)="goto('login')" name="arrow-back" style="font-weight: bold;font-size: 25px;
+        "></ion-icon><span (click)="goto('home')" style="    font-weight: bold;
+      margin-left: 34px;
+      margin-top: -25px;
+      display: block;">Back</span></ion-col> -->
+    <ion-col size="6">
+      <div class="edit">Add Profile</div>
+    </ion-col>
+  </ion-row> 
+
+  <ion-row>
+    <ion-col size="12" class="center">
+      <img class="proj"  src="{{resPath}}"><br>
+      <button (click)="selectImage()" class="profbtn">Change Profile Picture</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6" class="colpad">
+        <div class="unmae">First name</div>
+        <ion-input [(ngModel)]="fname" class="inp"></ion-input>
+    </ion-col>
+    <ion-col size="6" class="colpad">
+        <div class="unmae">Last name</div>
+        <ion-input [(ngModel)]="lname" class="inp"></ion-input>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12">
+          <div class="unmae">Email address</div>
+          <ion-input [(ngModel)]="email" class="inp inplong"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12">
+            <div class="unmae">Phone number</div>
+            <ion-input [(ngModel)]="pnumber" class="inp inplong"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="12">
+              <div class="unmae">Birthday</div>
+              <!-- <ion-input [(ngModel)]="birthday" class="inp inplong"></ion-input> -->
+              <ion-datetime [(ngModel)]="dob" class="inp inplong" displayFormat="DD MMMM YYYY" ></ion-datetime>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+              <label class="switch"><span class="male">Male</span><span class="female">Female</span><input (change)="toggleEditable($event)" type="checkbox" />    <div id="abc">Male</div>
+              </label>
+          </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 24%;">
+          <ion-col size="12">
+              <ion-button (click)="upload()" class="bttn" color="tertiary">Save Changes</ion-button>
+          </ion-col>
+        </ion-row>
+</ion-grid>
+</ion-content>

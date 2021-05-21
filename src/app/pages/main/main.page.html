@@ -1,0 +1,246 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+          <ion-toolbar style="padding: 0;">
+            <ion-label class="lab">Cards for your</ion-label>
+            <ion-title style="    text-align: left;
+                    padding: 0;
+                    color: #1f1e1f;">loved ones</ion-title>
+          </ion-toolbar>
+        </ion-col>
+        <ion-col size="3">
+          <div class="box"><img class="imgc" src="assets/img/cart.png">
+            <ion-badge class="badge" color="dark">99</ion-badge>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="10">
+          <ion-icon class="glassimg" name="search"></ion-icon>
+          <ion-input [(ngModel)]="searchBar" (ionChange)="getItems(searchBar)" placeholder="Search" class="inmp">
+          </ion-input>
+        </ion-col>
+        <ion-col size="2">
+          
+          <img style="margin-left: 10px;
+              margin-top: 10px;" src="assets/img/Filters.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+
+          <ul class="ulo">
+            <!-- <li [ngClass]="{'active': selectedItem == 'categories'}" (click)="imagegg('categories')">
+              <div>Categories</div>
+            </li> -->
+            <li [ngClass]="{'active': selectedItem == 'Trending'}" (click)="imagegg('Trending')">
+              <div>Trending</div>
+            </li>
+            <li [ngClass]="{'active': selectedItem == 'Premium'}" (click)="imagegg('Premium')">Premium</li>
+            <li [ngClass]="{'active': selectedItem == 'Basic'}" (click)="imagegg('Basic')">Basic</li>
+          </ul>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+
+    <ion-row *ngIf="prod">
+      <ion-col size="6" *ngFor="let pro of resArry" (click)="price(pro.amount,pro.image,pro.category_name)">
+
+        <div style="margin-left: 3%;">
+            <span style="font-size:13px;">{{pro.category_name}}</span><br>
+            <ion-label style="color:gray;font-weight:bold">${{pro.amount}}</ion-label>
+        </div>
+
+        <div class="checks">
+          <img class="carimg" src="{{pro.image}}">
+          <h1>{{pro.sub_cat_name}}</h1>
+          <p>${{pro.amount}}</p>
+        </div>
+
+      </ion-col>
+
+
+
+    </ion-row>
+    <!-- <ion-row *ngIf="categories">
+
+      <ion-col size="6">
+        <div class="catmm">
+          <img src="../../../assets/img/invitation@2x.png">
+          <p>Invitations</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#ffc5df;">
+          <img src="../../../assets/img/Group 196@2x.png">
+          <p>Wedding</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#ffcc9c;">
+          <img src="../../../assets/img/cake (1)@2x.png">
+          <p>Birthday</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#8decbb;">
+          <img src="../../../assets/img/water-drop@2x.png">
+          <p>Christening</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#a08bf6;">
+          <img src="../../../assets/img/christmas-hat@2x.png">
+          <p>Chrismas</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#aeb8c8;">
+          <img src="../../../assets/img/easter-egg@2x.png">
+          <p>Easter</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#ff8888;">
+          <img src="../../../assets/img/Path 710@2x.png">
+          <p>Valentine's Day</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#d8cebf;">
+          <img src="../../../assets/img/mother-with-baby-in-arms@2x.png">
+          <p>Mother Day</p>
+        </div>
+      </ion-col>
+
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#bbbbd2;">
+          <img src="../../../assets/img/tie@2x.png">
+          <p>Father's Day</p>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="catmm" style="background:#b2d5d1;">
+          <img src="../../../assets/img/chef@2x.png">
+          <p>Kitchen</p>
+        </div>
+      </ion-col> -->
+
+      <!-- <ion-col size="12">
+        <ion-list>
+          <ion-item>
+            <ion-label>
+                Invitations
+            </ion-label>
+            <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+          </ion-item>
+          <ion-item>
+              <ion-label>
+                  Wedding
+              </ion-label>
+              <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    Birthday
+                </ion-label>
+                <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+              </ion-item>
+              <ion-item> 
+                  <ion-label>
+                      Christening
+                  </ion-label>
+                  <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                        Christmas
+                    </ion-label>
+                    <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>
+                          Easter
+                      </ion-label>
+                      <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>
+                            Valentine’s Day
+                        </ion-label>
+                        <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label>
+                              Mothers day
+                          </ion-label>
+                          <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>
+                                Fathers Day
+                            </ion-label>
+                            <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                          </ion-item>
+                          <ion-item>
+                              <ion-label>
+                                  Kitchen Tea
+                              </ion-label>
+                              <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>
+                                    Hens
+                                </ion-label>
+                                <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                              </ion-item>
+                              <ion-item>
+                                  <ion-label>
+                                      Bucks
+                                  </ion-label>
+                                  <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>
+                                        Name day
+                                    </ion-label>
+                                    <ion-icon style="float:right" name="arrow-forward"></ion-icon>
+                                  </ion-item>
+        </ion-list>
+      </ion-col> -->
+
+
+
+    <!-- </ion-row> -->
+  </ion-grid>
+
+</ion-content>
+<ion-footer style="background:#fff;">
+  <ion-row>
+    <ion-col size="4">
+      <img (click)="goto('main')" class="k" src="assets/img/h2.png">
+      <div class="cap">Home</div>
+    </ion-col>
+    <ion-col size="4">
+      <img (click)="goto('mycard')" class="k l" src="assets/img/Group.png">
+    </ion-col>
+    <ion-col size="4">
+      <img class="k l" (click)="goto('profile')" src="assets/img/Profile.png">
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,47 @@
+ 
+
+<ion-content>
+    <ion-grid>
+        <ion-row style="margin-top: 13px;">
+            <ion-col size="4"><ion-icon (click)="goto('home')" name="arrow-back" style="font-weight: bold"></ion-icon><span (click)="goto('home')" style="font-weight: bold;margin-left: 3px">Back</span></ion-col>
+            <ion-col size="6">
+              <div class="edit">Checkout</div>
+            </ion-col>
+          </ion-row> 
+        <ion-row>
+            <ion-col size="12">
+                <label class="switch" ><span class="male">Credit card</span><span class="female">Paypal</span><input checked (change)="toggleEditable($event)" type="checkbox" />    <div id="abc">Paypal</div>
+                </label>
+            </ion-col>
+          </ion-row>
+          <ion-row style="margin-top: 14%;">
+              <ion-col size="12">
+                  <div class="unmae">Email address</div>
+                  <ion-input class="inp inplong"></ion-input>
+              </ion-col>
+            </ion-row>
+            
+                  <ion-row style="margin-top: 38%;">
+                    <ion-col size="12" class="center">
+                        <label class="vvv">Payment breakdown</label>
+                    </ion-col>
+                    <ion-col size="12" class="center">
+                      <div class="paybox"></div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col size="12" class="center">
+                          <label class="vvv">Note</label>
+                          <div  class="note">
+                            You agree to authorize the use of your credit<br>card for this deposit and future payments
+                          </div>
+                      </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col size="12">
+                      <button class="paybtn">Pay $515.00 AUD</button>
+                    </ion-col>
+                  </ion-row>
+    </ion-grid>
+    </ion-content> 
+    
